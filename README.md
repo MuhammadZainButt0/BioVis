@@ -66,16 +66,3 @@ streamlit run BioVis.py
 
 The app will open in your browser at `http://localhost:8501`
 
-## Dependencies 
-
-| Package | Version |
-|---------|---------|
-| streamlit | 1.28.1 |
-| pandas | 2.1.3 |
-| numpy | 1.24.3 |
-| plotly | 5.18.0 |
-| openai | 1.3.9 |
-| requests | 2.31.0 |
-| python-dotenv | 1.0.0 |
-| openpyxl | 3.11.0 |
-
