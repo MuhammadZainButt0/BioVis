@@ -533,7 +533,7 @@ if st.session_state.df is None:
         # Centering using columns
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
-            st.image("Untitled.png", width=900)
+            st.image("overview.png", width=900)
             if st.button(" Get Started ➡", use_container_width=True):
                 st.write()
 
@@ -944,3 +944,4 @@ if st.session_state.df is not None:
                     <p>Unable to generate chart code. Please check your API configuration or try a simpler query.</p>
                 </div>
                 """, unsafe_allow_html=True)
+
