@@ -3,7 +3,13 @@
 ## Overview
 
 BioVis is a Streamlit-based web application that combines data visualization with AI-powered insights. It enables users to upload datasets, generate interactive charts using natural language queries, and discover relevant academic research papers.
-
+![User Interface](https://github.com/MuhammadZainButt0/BioVis/blob/main/overview.png)
+Input: Query + Upload Data File
+Ouput: 
+    i.   Required Graph 
+    ii.  AI generated graph explanation 
+    iii. Five most relevant articles related to graph or data 
+       
 ## Features
 
 - **Data Upload & Management**: Support for CSV, TSV, and Excel (.xlsx) formats
