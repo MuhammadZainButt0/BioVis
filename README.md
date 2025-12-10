@@ -31,14 +31,15 @@ BioVis is a Streamlit-based web application that combines data visualization wit
 ### 1. Clone or Download the Project
 
 ```bash
-cd c:\Users\PMLS\Desktop\BioVis_Code
+git clone https://github.com/MuhammadZainButt0/BioVis.git
+cd BioVis
 ```
 
 ### 2. Create a Virtual Environment (Recommended)
 
 ```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
+python -m venv env_name
+.\env_name\Scripts\Activate.ps1
 ```
 
 ### 3. Install Dependencies
@@ -49,14 +50,15 @@ pip install -r requirements.txt
 
 ### 4. Configure Environment Variables
 
-Create a `.env` file in the project root directory (as in BioVis_Code):
+Create a `.env` file in the project root directory (as in BioVis):
 
 ```
-DEEPSEEK_API_KEY=your_deepseek_key_here
-GPT_API_KEY=your_gpt_key_here
-QWEN_API_KEY=your_qwen_key_here
-SEMANTIC_SCHOLAR_API_KEY=your_semantic_scholar_key_here
+DEEPSEEK_API_KEY="your_deepseek_key_here"
+GPT_API_KEY="your_gpt_key_here"
+QWEN_API_KEY="your_qwen_key_here"
+SEMANTIC_SCHOLAR_API_KEY="your_semantic_scholar_key_here"
 ```
+If you don't have above API's, then create account on [OpenRouter](https://openrouter.ai/models) and generate the above keys.
 
 ## 5. Running the Application
 
