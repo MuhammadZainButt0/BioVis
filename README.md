@@ -76,11 +76,16 @@ Following are the some outcomes of BioVis, on different datasets. In the followi
 shows the relevant research papers which BioVis retrieve from the Semantic scholar upon thhe formulated query as: 
 
 - **Figures**:
-  1. **On Gene Expression Dataset**  
+  1. **On Gene Expression Dataset**
+      
      ![Gene Expression Dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/Gene_expression.png)
-  2. **Chromatin Accesible dataset**  
+     
+  2. **Chromatin Accesible dataset**
+     
      ![Chromatin Accesible dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/Chromatin_accessible.png)
-  3. **Clinical Diabetic Dataset**  
+     
+  3. **Clinical Diabetic Dataset**
+     
      ![Clinical Diabetic Dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/Clinical_Diabetic.png)
 
 
