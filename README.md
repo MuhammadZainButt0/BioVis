@@ -1,6 +1,4 @@
-# BioVis 
-
-Transform Your Data Into Interactive Visualizations with AI
+# BioVis: An Integrated Tool for Data Visualization, AI-Powered Interpretation, and Scholarly Literature Search via Natural Language Query (NLQ)
 
 ## Overview
 
@@ -10,7 +8,6 @@ BioVis is a Streamlit-based web application that combines data visualization wit
 
 - **Data Upload & Management**: Support for CSV, TSV, and Excel (.xlsx) formats
 - **AI-Powered Chart Generation**: Generate Plotly visualizations from natural language queries
-- **Interactive Visualizations**: Explore data with Plotly's interactive charts
 - **AI Insights**: Automatic analysis and explanation of generated charts
 - **Academic Research Integration**: Auto-discovery of relevant research papers via Semantic Scholar
 - **Graph Interpreter**: Analyze uploaded graph images with AI
@@ -19,12 +16,12 @@ BioVis is a Streamlit-based web application that combines data visualization wit
 
 ## Prerequisites
 
-- Python 3.8+
+- (Python 3.8+)[]
 - API keys for:
-  - DeepSeek API (via OpenRouter)
-  - GPT API (via OpenRouter)
-  - Qwen API (via OpenRouter)
-  - Semantic Scholar API
+  - (DeepSeek API (via OpenRouter))[https://openrouter.ai/deepseek/deepseek-chat-v3.1]
+  - (GPT API (via OpenRouter))[https://openrouter.ai/openai/gpt-oss-20b:free]
+  - (Qwen API (via OpenRouter))[https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct]
+  - (Semantic Scholar API)[https://www.semanticscholar.org/product/api#api-key]
 
 ## Installation
 
@@ -58,12 +55,12 @@ GPT_API_KEY="your_gpt_key_here"
 QWEN_API_KEY="your_qwen_key_here"
 SEMANTIC_SCHOLAR_API_KEY="your_semantic_scholar_key_here"
 ```
-If you don't have above API's, then create account on [OpenRouter](https://openrouter.ai/models) and generate the above keys.
+If you don't have above API's, then create account on [OpenRouter](https://openrouter.ai/models) and [Semantic Scholar](https://www.semanticscholar.org/product/api) to generate the above keys.
 
 ## 5. Running the Application
 
 ```powershell
-streamlit run BioVis.py
+streamlit run app.py
 ```
 
 The app will open in your browser at `http://localhost:8501`
