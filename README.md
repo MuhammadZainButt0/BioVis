@@ -29,7 +29,7 @@ BioVis is a Streamlit-based web application that combines data visualization wit
 
 ## Installation
 
-### 1. Clone or Download the Project
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/MuhammadZainButt0/BioVis.git
@@ -42,6 +42,7 @@ cd BioVis
 python -m venv env_name
 .\env_name\Scripts\Activate.ps1
 ```
+User can also skip the above step if he don't have the knowlegde of virtual environment, and can proceed to the next step.
 
 ### 3. Install Dependencies
 
@@ -68,4 +69,40 @@ streamlit run app.py
 ```
 
 The app will open in your browser at `http://localhost:8501`
+
+## Results
+
+Following are the some outcomes of BioVis, on different datasets. In the following panels (section A) show the dataset, (section B) shows the interactive visualization with plotly, (section D) shows the AI-generated explanation and formulated query out of graph or data  and (section C)
+shows the relevant research papers which BioVis retrieve from the Semantic scholar upon thhe formulated query as: 
+
+- **Figures**:
+  1. **On Gene Expression Dataset**  
+     ![Gene Expression Dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/Gene_expression.png)
+  2. **Chromatin Accesible dataset**  
+     ![Chromatin Accesible dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/Chromatin_accessible.png)
+  3. **Clinical Diabetic Dataset**  
+     ![Clinical Diabetic Dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/Clinical_Diabetic.png)
+
+
+
+## Deployment
+
+BioVis is deployed on hugging face. If user wants to test or use the BioVis, [click here](https://huggingface.co/spaces/ml4genomics/BioVis.)
+
+# Tips for Success
+
+- Ensure your input files are correctly formatted such as csv, xlsx or tsv,  and contain all information required for visualization.
+- Try to make query in simple and detail manner, avoid informal words. 
+- On every run the results may be different, so check the reliabilty before the usage of information.
+  
+# Contributing
+We welcome contributions! Please fork the repository and submit pull requests for any enhancements or bug fixes.
+
+# Contact Us
+For any questions or issues, please contact us at:
+- **Mr. Muhammad Zain Butt**: [zain.202302328@gcuf.edu.pk](mailto:zain.202302328@gcuf.edu.pk)
+- **Mr. Rana Sheraz Ahmad**: [ranasheraz.202101902@gcuf.edu.pk](mailto:ranasheraz.202101902@gcuf.edu.pk)
+- **Dr. Muhammad Tahir ul Qamar**: [m.tahirulqamar@hotmail.com](mailto:tahirulqamar@gcuf.edu.pk)
+
+
 
