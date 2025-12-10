@@ -4,10 +4,14 @@
 
 BioVis is a Streamlit-based web application that combines data visualization with AI-powered insights. It enables users to upload datasets, generate interactive charts using natural language queries, and discover relevant academic research papers.
 ![User Interface](https://github.com/MuhammadZainButt0/BioVis/blob/main/overview.png)
+
 Input: Query + Upload Data File
-Ouput: 
+Ouput:
+
     i.   Required Graph 
+    
     ii.  AI generated graph explanation 
+    
     iii. Five most relevant articles related to graph or data 
        
 ## Features
@@ -22,12 +26,12 @@ Ouput:
 
 ## Prerequisites
 
-- (Python 3.8+)[]
+- [Python 3.8+](https://www.python.org/downloads/)
 - API keys for:
-  - (DeepSeek API (via OpenRouter))[https://openrouter.ai/deepseek/deepseek-chat-v3.1]
-  - (GPT API (via OpenRouter))[https://openrouter.ai/openai/gpt-oss-20b:free]
-  - (Qwen API (via OpenRouter))[https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct]
-  - (Semantic Scholar API)[https://www.semanticscholar.org/product/api#api-key]
+  - [DeepSeek API (via OpenRouter)](https://openrouter.ai/deepseek/deepseek-chat-v3.1)
+  - [GPT API (via OpenRouter)](https://openrouter.ai/openai/gpt-oss-20b:free)
+  - [Qwen API (via OpenRouter)](https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct)
+  - [Semantic Scholar API](https://www.semanticscholar.org/product/api#api-key)
 
 ## Installation
 
