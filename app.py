@@ -14,7 +14,7 @@ import base64
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #2A24CE;">
-  <h2 style="color: white; margin-right: 20px;">BioVis</h2>
+  <h1 style="color: white; margin-right: 20px;">BioVis</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -467,7 +467,7 @@ def interpret_graph_with_qwen(image_base64: str, question: str) -> str:
         ]
         
         response = qwen_client.chat.completions.create(
-            model="qwen/qwen2.5-vl-32b-instruct:free",
+            model="qwen/qwen2.5-vl-32b-instruct",
             messages=messages,
             max_tokens=1000,
             temperature=0.3
@@ -496,7 +496,7 @@ def create_sample_data_from_drive(sample_choice: str) -> pd.DataFrame:
             download_url = f"https://drive.google.com/uc?export=download&id={file_id}"
             df = pd.read_csv(download_url)
             return df
-        if sample_choice == "Clinical_Diabetes Data":
+        if sample_choice == "Clinical Diabetes Data":
             # Use the share link you provided
             share_url = "https://drive.google.com/file/d/1kdhxtQSsbU0xdgv4jPgYvEX-DDRIEOqc/view?usp=drive_link"
             file_id = share_url.split("/")[-2]
@@ -516,14 +516,13 @@ if 'fig' not in st.session_state:
     st.session_state.fig = None
 
 
+
 # Show intro only if no dataset is loaded
 if st.session_state.df is None:
     st.markdown("""
     <div class="main-header">
         <h1> What is BioVis?</h1>
-        <p>BioVis is an innovative web-based tool that integrates data visualization, AI-powered interpretation, and relevant literature search—all from a single query.</p>
-        <p>It allows users to visualize their uploaded data and discover pertinent research articles seamlessly. Additionally, BioVis supports both conversational and uploaded</p>
-        <p> graph interpretation to enhance users’ understanding of their data trends and patterns.</p>
+        <p>BioVis is an innovative web-based tool that integrates data visualization, AI-powered interpretation, and relevant literature search—all from a single query. It allows users to visualize their uploaded data and discover pertinent research articles seamlessly. Additionally, BioVis supports both conversational and uploaded graph interpretation to enhance users’ understanding of their data trends and patterns.</strong></p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -534,8 +533,7 @@ if st.session_state.df is None:
         col1, col2, col3 = st.columns([1, 2, 1])
         with col2:
             st.image("overview.jpg", width=900)
-            if st.button(" Get Started ➡", use_container_width=True):
-                st.write()
+           
 
 
 
@@ -765,14 +763,14 @@ if st.session_state.df is not None:
     # Add Submit button
     if st.button("Submit Query", use_container_width=True):
         if not query.strip():
-            st.warning("⚠️ Please enter a query first.")
+            st.warning("Please enter a query first.")
         elif st.session_state.df is None:
             st.error("❌ No dataset loaded yet.")
         else:
             df = st.session_state.df
             columns = ", ".join(df.columns)
 
-            with st.spinner("🎨 Generating Graph..."):
+            with st.spinner("Generating Graph..."):
                 code = generate_chart_code(columns, query)
 
             if code:
@@ -786,7 +784,7 @@ if st.session_state.df is not None:
 
                 while attempt < max_attempts and not success:
                     try:
-                        with st.spinner(f"⚙️ Executing visualization (attempt {attempt + 1})..."):
+                        with st.spinner(f"Executing visualization (attempt {attempt + 1})..."):
                             exec(code, {}, local_vars)
 
                         if "fig" not in local_vars:
@@ -794,7 +792,7 @@ if st.session_state.df is not None:
 
                         st.markdown("""
                         <div class="section-header">
-                            <h3>📊 Your Interactive Visualization</h3>
+                            <h3>Interactive Visualization</h3>
                         </div>
                         """, unsafe_allow_html=True)
                         local_vars["fig"].update_layout(height=600)
@@ -802,7 +800,7 @@ if st.session_state.df is not None:
                         st.plotly_chart(
                             local_vars["fig"], 
                             use_container_width=True, 
-                            config={"displayModeBar": False}
+                            config={"displayModeBar": True}
                             )
 
                         st.session_state.fig = local_vars["fig"]
@@ -818,7 +816,7 @@ if st.session_state.df is not None:
                             </div>
                             """, unsafe_allow_html=True)
 
-                            with st.spinner("🧠 Generating insights..."):
+                            with st.spinner("Generating insights..."):
                                 numeric_cols = df.select_dtypes(include=['number']).columns
                                 stats_summary = f"Dataset shape: {df.shape}. Numeric columns: {list(numeric_cols)}. Sample stats: {df[numeric_cols].describe().to_dict() if len(numeric_cols) > 0 else 'No numeric data.'}"
                                 explanation = generate_explanation(query, columns, stats_summary)
@@ -836,7 +834,7 @@ if st.session_state.df is not None:
                             </div>
                             """, unsafe_allow_html=True)
 
-                            with st.spinner("🔬 Generating research query..."):
+                            with st.spinner("Generating research query..."):
                                 academic_query = analyze_explanation_for_query(explanation, query, columns)
 
                             st.markdown(f"""
@@ -857,7 +855,7 @@ if st.session_state.df is not None:
                             papers_df = search_semantic_scholar(academic_query)
 
                         if not papers_df.empty and "Title" in papers_df.columns:
-                            st.markdown("### 📄 Semantic Scholar Papers")
+                            st.markdown("### Semantic Scholar Papers")
                             for idx, row in papers_df.iterrows():
                                 st.markdown(f"""
                                 <div style="background: #f8f9ff; padding: 1rem; margin: 0.5rem 0; border-radius: 8px; border-left: 4px solid #667eea;">
@@ -894,7 +892,7 @@ if st.session_state.df is not None:
                         """, unsafe_allow_html=True)
 
                         if attempt < max_attempts:
-                            with st.spinner("🔧 Auto-fixing code..."):
+                            with st.spinner("Auto-fixing code..."):
                                 current_hash = hash(code)
                                 new_code = fix_chart_code(code, str(e))
 
@@ -914,7 +912,7 @@ if st.session_state.df is not None:
                             </div>
                             """, unsafe_allow_html=True)
 
-                            with st.expander("View Corrected Code", expanded=True):
+                            with st.expander("View Corrected Code", expanded=False):
                                 st.code(code, language="python")
                             local_vars = {"df": df, "px": px, "go": go}
                         else:
@@ -930,13 +928,6 @@ if st.session_state.df is not None:
                             </div>
                             """, unsafe_allow_html=True)
 
-                if not success:
-                    st.markdown("""
-                    <div class="custom-warning">
-                        <h4>💡 Suggestion</h4>
-                        <p>Rephrase your request with different terminology.</p>
-                    </div>
-                    """, unsafe_allow_html=True)
             else:
                 st.markdown("""
                 <div class="custom-warning">
@@ -944,5 +935,3 @@ if st.session_state.df is not None:
                     <p>Unable to generate chart code. Please check your API configuration or try a simpler query.</p>
                 </div>
                 """, unsafe_allow_html=True)
-
-
