@@ -1,0 +1,24 @@
+[theme]
+# Professional color scheme
+primaryColor = "#667eea"              # Modern purple-blue for interactive elements
+backgroundColor = "#ffffff"           # Clean white background
+secondaryBackgroundColor = "#f8f9ff"  # Light purple-tinted background for panels
+textColor = "#2c3e50"                 # Professional dark blue-gray for text
+font = "sans serif"                   # Clean, professional sans-serif font
+
+[server]
+# Performance optimizations
+maxUploadSize = 200                   # Allow larger file uploads (200MB)
+enableCORS = false                    # Security setting
+enableXsrfProtection = true           # CSRF protection
+
+[browser]
+# Professional browser settings
+gatherUsageStats = false              # Privacy-focused
+showErrorDetails = true               # Help with debugging
+
+[client]
+# UI enhancements
+showErrorDetails = true
+#toolbarMode = "minimal"               # Clean, minimal toolbar
+
