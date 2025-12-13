@@ -78,15 +78,15 @@ shows the relevant research papers which BioVis retrieve from the Semantic schol
 - **Figures**:
   1. **On Gene Expression Dataset**
       
-     ![Gene Expression Dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/Gene_expression.png)
+     ![Gene Expression Dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/results/Gene_expression.png)
      
   2. **Chromatin Accesible dataset**
      
-     ![Chromatin Accesible dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/Chromatin_accessible.png)
+     ![Chromatin Accesible dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/results/Chromatin_accessible.png)
      
   3. **Clinical Diabetic Dataset**
      
-     ![Clinical Diabetic Dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/Clinical_Diabetic.png)
+     ![Clinical Diabetic Dataset](https://github.com/MuhammadZainButt0/BioVis/blob/main/results/Clinical_Diabetic.png)
 
 
 
