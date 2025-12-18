@@ -37,12 +37,12 @@ cd BioVis
 ```
 
 ### 2. Create a Virtual Environment (Recommended)
-## For Windows:
+#### For Windows:
 ```powershell
 python -m venv env_name
 .\env_name\Scripts\Activate.ps1
 ```
-## For Linux:
+#### For Linux:
 ```powershell
 python3 -m venv env_name
 source env_name\bin\activate
