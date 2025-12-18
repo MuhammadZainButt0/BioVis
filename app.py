@@ -297,7 +297,7 @@ def clean_code(text: str) -> str:
 def generate_chart_code(columns: str, query: str) -> str:
     messages = [
         {"role": "system", "content": "You are a data visualization assistant."},
-        {"role": "user", "content": f"The user uploaded a dataset with the following columns:\n{columns}\n\nThe user asked: '{query}'\n\nWrite valid Python code that:\n1. Uses Plotly (px or go) to create the most appropriate chart.\n2. The dataframe is available as `df`.\n3. Save the chart as a variable named `fig`.\n\nOnly return the code. Do not include explanations."}
+        {"role": "user", "content": f"The user uploaded a dataset with the following columns:\n{columns}\n\nThe user asked: '{query}'\n\nWrite valid Python code that:\n1. Uses Plotly (px or go) to create the most appropriate chart.\n2. The dataframe is available as `df`.\n3. Save the chart as a variable named `fig`.\n\nOnly return the code. Do not include explanations.And first validate that the headers or information mentioned in the user query is present. If it is not present then don't generate the code"}
     ]
     
     try:
