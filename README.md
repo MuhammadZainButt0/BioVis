@@ -113,7 +113,7 @@ For any questions or issues, please contact us at:
 - **Mr. Muhammad Zain Butt**: [zain.202302328@gcuf.edu.pk](mailto:zain.202302328@gcuf.edu.pk)
 - **Mr. Rana Sheraz Ahmad**: [ranasheraz.202101902@gcuf.edu.pk](mailto:ranasheraz.202101902@gcuf.edu.pk)
 - **Dr. Muhammad Tahir ul Qamar**: [m.tahirulqamar@hotmail.com](mailto:tahirulqamar@gcuf.edu.pk)
-- - **Eman Fatima**: [eman.202204127@gcuf.edu.pk](mailto:eman.202204127@gcuf.edu.pk)
+- **Eman Fatima**: [eman.202204127@gcuf.edu.pk](mailto:eman.202204127@gcuf.edu.pk)
 
 
 
